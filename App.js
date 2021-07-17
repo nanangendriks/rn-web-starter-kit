@@ -4,10 +4,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import tailwind from 'tailwind-rn';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 function HomeScreen({navigation}) {
   return (
     <View style={tailwind('flex-1 items-center justify-center')}>
+      <Icon name="home" size={24} />
       <Text>Home!</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
         <Text style={tailwind('text-green-400')}>Go to Detail Screen</Text>
